@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    height: 120%;
+    background: rgb(18, 18, 18);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+   
+    background: none;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg text {
+    -webkit-font-smoothing: antialiased;
+    font-size: 3.6rem;
+    z-index: 2;
+    font-weight: 900;
+    font-family:"Anton", sans-serif; 
+    color: white;
+    text-anchor: middle;
+    line-height: 90%;
+    font-style: normal;
+    position: relative;
+    background: none;
+    word-break: break-word;
+}
+
+.block1, .block2, .block3, .block4 {
+    position: absolute;
+    z-index: 1;
+    transition: all 3s ease; /* Add smooth transition */
+}
+
+.block1 {
+    width: 40vh;
+    height: 30vh;
+    
+   
+    display: flex;
+    top: 20vh;
+    left: 36vh;
+   
+}
+
+.block2 {
+    width: 50vh;
+    height: 25vh;
+    top: 16vh;
+    display: flex;
+    right: 35vh;
+}
+
+.block3 {
+    width: 40vh;
+    height: 20vh;
+    top: 70.8vh;
+    display: flex;
+    left: 55vh;
+}
+
+.block4 {
+    width: 50vh;
+    height: 16vh;
+    top: 60vh;
+    display: flex;
+    right: 26vh;
+}
+
+
+/* Apply hover effects to both blocks and their images */
+.block1:hover,
+.block2:hover,
+.block3:hover,
+.block4:hover {
+    position: absolute;
+    z-index: 3;
+    transform: scale(1.1); /* Add scale effect on hover */
+}
+
+.block1 img,
+.block2 img,
+.block3 img,
+.block4 img {
+    width: 100%;
+    height: 100%;
+   display: flex;
+   align-items: center;
+    transition: all 0.3s ease; /* Add smooth transition */
+}
+
+/* Add hover effects specifically for images */
+.block1:hover img,
+.block2:hover img,
+.block3:hover img,
+.block4:hover img {
+    transform: scale(1.05); /* Scale up image slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    filter: brightness(1.1); /* Brighten image slightly */
+}
+
+
+.parallax-block {
+    position: absolute;
+    transition: transform 0.3s ease; /* Smooth transitions for parallax effect */
+}
+.line1 {
+    position: absolute;
+    top: 25vh; /* Adjust as needed */
+    left: 32vh; /* Adjust as needed */
+    display: flex; /* Use flex to stack elements if needed */
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center align items */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    z-index: 5; 
+}
+
+.line1 h1 {
+    margin: 0;          /* Remove default margin */
+    line-height: 1;     /* Control line height */
+    background: none;   /* Remove background if necessary */
+    padding: 0;
+}
+.line2 {
+    position: absolute;
+    top:32vh; /* Position near the bottom */
+    right: 10px; /* Position near the right */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    z-index: 5; /* Ensure it's above other elements */
+   font-family:  Helvetica, Arial, sans-serif;
+    padding: 5px; /* Padding for better visibility */
+    border-radius: 5px; /* Rounded corners */
+}
+.boxx {
+    position: relative; /* Position context for image and text */
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transformation */
+}
+.boxx .line1{
+    opacity:0;
+}
+.boxx:hover .line1 {
+    opacity: 1;
+}
